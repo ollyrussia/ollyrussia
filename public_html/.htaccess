@@ -1,0 +1,33 @@
+RewriteEngine On
+RewriteRule ^(vaganova|kozlov|usmanova|kosova|batenko)/?$ https://ollyteam.ru/ [R=301,L]
+
+Redirect 301 /cons https://ollyteam.ru?UTM=cheremnih
+
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+
+# BEGIN WordPress
+# Директивы (строки) между `BEGIN WordPress` и `END WordPress`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteRule ^android-chrome-144x144\.png /wp-content/uploads/fbrfg/android-chrome-144x144.png [QSA,L]
+RewriteRule ^apple-touch-icon\.png /wp-content/uploads/fbrfg/apple-touch-icon.png [QSA,L]
+RewriteRule ^browserconfig\.xml /wp-content/uploads/fbrfg/browserconfig.xml [QSA,L]
+RewriteRule ^favicon-16x16\.png /wp-content/uploads/fbrfg/favicon-16x16.png [QSA,L]
+RewriteRule ^favicon-32x32\.png /wp-content/uploads/fbrfg/favicon-32x32.png [QSA,L]
+RewriteRule ^favicon\.ico /wp-content/uploads/fbrfg/favicon.ico [QSA,L]
+RewriteRule ^mstile-150x150\.png /wp-content/uploads/fbrfg/mstile-150x150.png [QSA,L]
+RewriteRule ^safari-pinned-tab\.svg /wp-content/uploads/fbrfg/safari-pinned-tab.svg [QSA,L]
+RewriteRule ^site\.webmanifest /wp-content/uploads/fbrfg/site.webmanifest [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

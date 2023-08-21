@@ -1,0 +1,12 @@
+*.log
+*.txt
+/amo_login
+/old_site
+41b1df30506bb464540b31c371981340
+*/41b1df30506bb464540b31c371981340
+/wp-content/uploads/*
+/wp-content/languages/*.json
+
+*.jpg
+*.png
+*.pdf
